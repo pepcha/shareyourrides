@@ -47,4 +47,7 @@ Rails.application.routes.draw do
   get :demo_terms, to: 'pages#demo_terms'
   get :fbjssdk_channel, to: 'pages#fbjssdk_channel'
   post :report_uri, to: 'pages#report_uri'
+
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'logout', to: 'sessions#destroy'
 end
